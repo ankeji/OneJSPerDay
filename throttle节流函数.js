@@ -4,18 +4,8 @@
  * @Author: ankeji
  * @Date: 2020-10-20 17:27:43
  * @LastEditors: ankeji
- * @LastEditTime: 2020-10-20 17:51:23
+ * @LastEditTime: 2020-10-21 10:36:11
  */
-// 时间戳版本
-var timer = null;
-const throttle2 = (fn, waitTime) => {
-    clearInterval(timer)
-    return (...args) => {
-        timer = setTimeout(() => {
-            fn(...args);
-        }, waitTime)
-    }
-}
 
 const throttle = (fn, waitTime) => {
     let isRunnig = false;

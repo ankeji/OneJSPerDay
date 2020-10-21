@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <botton id="btn">按钮</botton>
+    <script>
+        // 发起请求的函数
+        const sendRequest = () => {
+            console.log(123);
+        };
+
+        // 防抖函数
+        var timer = null
+        const debounce = (fn, waitTime) => {
+            return (fn, waitTime) => {
+                clearInterval(timer)
+                timer = setTimeout(() => {
+                    fn();
+                }, waitTime)
+            }
+        }
+
+        var btn = document.getElementById('btn')
+        btn.onclick = () => {
+            debounce(sendRequest, 1500)
+        }
+    </script>
+</body>
+
+</html>
