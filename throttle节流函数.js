@@ -4,7 +4,7 @@
  * @Author: ankeji
  * @Date: 2020-10-20 17:27:43
  * @LastEditors: ankeji
- * @LastEditTime: 2021-02-22 15:08:51
+ * @LastEditTime: 2021-02-26 09:48:41
  */
 
 const throttle1 = (fn, waitTime) => {
